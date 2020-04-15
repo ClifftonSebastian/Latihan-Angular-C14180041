@@ -14,11 +14,14 @@ export class AppComponent  {
   outputPola(input, a, b){
     this.output = [];
     let max =0;
+    let min=0;
     if(a>b){
       max=a;
+      min = b;
     }
     else{
       max=b;
+      min=a;
     }
     if(input % 2 == 0){
       //genap
@@ -32,14 +35,14 @@ export class AppComponent  {
     }
     else{
       //ganjil
-      let counta=b;
+      let counta=max;
       let countb=1;
       for(let i =0;i<max;i++){
         let str="";
         for(let j=0;j<counta;j++){
           str+="*";
         }
-        if(countb<=a){
+        if(countb<=min){
           for(let k=0;k<countb;k++){
             str+="o";
           }
@@ -56,5 +59,4 @@ export class AppComponent  {
     this.hasil = Math.pow(this.inputa,this.inputb);
     this.outputPola(this.hasil, this.inputa, this.inputb);
   }
-
 }
