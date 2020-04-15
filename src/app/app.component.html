@@ -1,4 +1,13 @@
 <hello name="{{ name }}"></hello>
+
 <p>
-  Start editing to see some magic happen :)
+a = <input [(ngModel)]="a" type="text">
 </p>
+<p>
+b = <input [(ngModel)]="b" type="text">
+</p>
+<button (click)="Hitung(a,b)">Hitung</button>
+<p>Hasil : {{hasil}}</p>
+<div *ngFor="let item of output">
+  {{item}}
+</div>
